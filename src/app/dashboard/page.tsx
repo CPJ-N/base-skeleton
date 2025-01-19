@@ -13,6 +13,11 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { Component as AreaChart } from "@/components/area-chart"
+import { Component as BarChart } from "@/components/bar-chart"
+import { Component as RadarChart } from "@/components/radar-chart"
+import { Component as PieChart } from "@/components/pie-chart"
+import { DataTableDemo } from "@/components/data-table"
 
 export default function Page() {
   return (
@@ -40,11 +45,16 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-muted/50" />
-            <div className="aspect-video rounded-xl bg-muted/50" />
-            <div className="aspect-video rounded-xl bg-muted/50" />
+            <div className="md:col-span-3">
+              <AreaChart />
+            </div>
+            <BarChart />
+            <RadarChart />
+            <PieChart />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+          <div className="rounded-xl bg-background p-6">
+            <DataTableDemo />
+          </div>
         </div>
       </SidebarInset>
     </SidebarProvider>
