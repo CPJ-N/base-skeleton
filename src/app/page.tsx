@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const router = useRouter();
@@ -37,18 +38,30 @@ export default function Home() {
           <li>Save and see your changes instantly.</li>
         </ol>
         <div className="flex gap-4 items-center flex-col sm:flex-row mt-4">
-          <button
+          <Button
             onClick={() => navigateTo("/dashboard")}
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-blue-500 text-white gap-2 hover:bg-blue-600 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
           >
             Go to Dashboard
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => navigateTo("/pricing")}
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-green-500 text-white gap-2 hover:bg-green-600 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
           >
             View Pricing
-          </button>
+          </Button>
+          <Button
+            onClick={() => navigateTo("/checkout")}
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-purple-500 text-white gap-2 hover:bg-purple-600 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+          >
+            Checkout
+          </Button>
+          <Button
+            onClick={() => navigateTo("/login")}
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-gray-500 text-white gap-2 hover:bg-gray-600 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+          >
+            Login
+          </Button>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
