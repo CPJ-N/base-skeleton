@@ -62,6 +62,12 @@ export default function Home() {
           >
             Login
           </Button>
+          <Button
+            onClick={() => navigateTo("/settings")}
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-slate-600 text-white gap-2 hover:bg-slate-700 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+          >
+            Settings
+          </Button>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
